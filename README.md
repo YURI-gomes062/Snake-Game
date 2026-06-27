@@ -6,4 +6,4 @@
 
 ### link food sound effect (https://freesound.org/people/AlienXXX/sounds/192579/)
 
-directed by [Rafael](https://github.com/rafa-7) [Yuri](https://github.com/YURI-gomes062)
+directed by [Rafael](https://github.com/rafa-7) and [Yuri](https://github.com/YURI-gomes062)
