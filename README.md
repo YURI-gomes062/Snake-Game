@@ -6,4 +6,9 @@
 
 #### link food sound effect (https://freesound.org/people/AlienXXX/sounds/192579/)
 
+*NOTE: You must download these packages for the game to work*
+
+*sudo apt update*
+*sudo apt install python3-tk*
+
 directed by [Rafael](https://github.com/rafa-7) and [Yuri](https://github.com/YURI-gomes062)
