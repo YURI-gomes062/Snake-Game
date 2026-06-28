@@ -10,14 +10,14 @@ import os
 
 # -------------------------------------------------------------
 #!-----------------------IMPORTANT-----------------------------
-fps_alvo = 60
-intervalo_por_quadro = 1 / fps_alvo
-eixoX = 690 # variavel que guarda
-eixoY = 400
+fps_alvo = 60 # quantidade de quadros por segundo
+intervalo_por_quadro = 1 / fps_alvo # define o intervalo de cada frame a ser desenhado
+eixoX = 690 # define o eixoX da zona de morte
+eixoY = 400 # define o eixoY da zona de morte
 pontuacao = 0 # Variável para armazenar a quantidade de maçãs comidas
-passos_cobra_pixel = 5
-range_colisao_comida = 20
-# -------------------------------------------------------------
+passos_cobra_pixel = 5 # define quantos pixel a cobra anda por passo
+range_colisao_comida = 20 # define a quantidade de pixels que a cobra interpreta por colisao na comida
+#!-------------------------------------------------------------
 
 # 1. Configuração da Tela
 tela = turtle.Screen()
