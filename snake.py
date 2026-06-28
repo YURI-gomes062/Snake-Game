@@ -5,16 +5,18 @@ import random
 import os
 
 # Ajuste o FPS aqui. 
-# Nota: Como a cobra anda 20 pixels por quadro, 60 FPS vai ser rápido demais.
+# Nota: Como a cobra anda 20 pixels por quadro, 60 FPS vai ser rápido demais. # * por isso tem varias variaveis de modificação...
 # Recomendo testar valores entre 10 e 15 para começar, e ir aumentando para dificultar!
 
 # -------------------------------------------------------------
 #!-----------------------IMPORTANT-----------------------------
-fps_alvo = 30
+fps_alvo = 60
 intervalo_por_quadro = 1 / fps_alvo
 eixoX = 690 # variavel que guarda
 eixoY = 400
 pontuacao = 0 # Variável para armazenar a quantidade de maçãs comidas
+passos_cobra_pixel = 5
+range_colisao_comida = 20
 # -------------------------------------------------------------
 
 # 1. Configuração da Tela
@@ -64,7 +66,7 @@ comida.color("red")
 comida.penup()
 comida.goto(0, 100)
 # -------------------------------------------------------------
-corpo = []
+corpo = [] # Uma lista inicialmente vazia que vai guardar os novos gomos (segmentos) da cobra conforme ela comer.
 # -------------------------------------------------------------
 # 4. Funções de Direção
 def ir_cima():
@@ -87,16 +89,16 @@ def ir_direita():
 def mover():
     if cabeca.direcao == "cima":
         y = cabeca.ycor()
-        cabeca.sety(y + 20)
+        cabeca.sety(y + passos_cobra_pixel)
     if cabeca.direcao == "baixo":
         y = cabeca.ycor()
-        cabeca.sety(y - 20)
+        cabeca.sety(y - passos_cobra_pixel)
     if cabeca.direcao == "esquerda":
         x = cabeca.xcor()
-        cabeca.setx(x - 20)
+        cabeca.setx(x - passos_cobra_pixel)
     if cabeca.direcao == "direita":
         x = cabeca.xcor()
-        cabeca.setx(x + 20)
+        cabeca.setx(x + passos_cobra_pixel)
 # --------------------------------------------------------------
 # 6. Mapeamento do Teclado
 tela.listen()
@@ -159,7 +161,7 @@ while True:
             caneta_pontos.write(f"🍎: {pontuacao}", font=("Arial", 14, "bold"))
 
         # Verifica colisão com a comida
-        if cabeca.distance(comida) < 20:
+        if cabeca.distance(comida) < range_colisao_comida:
             os.system("aplay comida.wav &") # Toca o som de comer de forma assíncrona
             
             x = random.randint(-int(eixoX - 40), int(eixoX - 40))
@@ -182,7 +184,7 @@ while True:
 
         # Verifica colisão com o próprio corpo
         for segmento in corpo:
-            if segmento.distance(cabeca) < 20:
+            if segmento.distance(cabeca) < passos_cobra_pixel:
                 os.system("aplay morreu.wav &") # Toca o som de morte
                 time.sleep(0.5)
                 cabeca.goto(0, 0)
