@@ -5,12 +5,12 @@ import random
 import os
 
 # Ajuste o FPS aqui. 
-# Nota: Como a cobra anda 20 pixels por quadro, 60 FPS vai ser rápido demais. # * por isso tem varias variaveis de modificação...
+# Nota: Como a cobra anda 20 pixels por quadro, 60 FPS vai ser rápido demais.
 # Recomendo testar valores entre 10 e 15 para começar, e ir aumentando para dificultar!
 
 # -------------------------------------------------------------
 #!-----------------------IMPORTANT-----------------------------
-fps_alvo = 60 # quantidade de quadros por segundo
+fps_alvo = 90 # quantidade de quadros por segundo
 intervalo_por_quadro = 1 / fps_alvo # define o intervalo de cada frame a ser desenhado
 eixoX = 690 # define o eixoX da zona de morte
 eixoY = 400 # define o eixoY da zona de morte
