@@ -19,3 +19,5 @@ sudo apt install python3-tk
 ```
 
 directed by [Rafael](https://github.com/rafa-7) and [Yuri](https://github.com/YURI-gomes062)
+
+This branch was completetly developed by [Ryan](https://github.com/ryansilvaqwertyu-code)
