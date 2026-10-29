@@ -23,7 +23,7 @@ range_colisao_comida = 20 # define a quantidade de pixels que a cobra interpreta
 tela = turtle.Screen()
 tela.title("Snake game")
 tela.bgcolor("#344055")
-tela.setup(width = 1366, height = 768) # resolução da tela do game.
+tela.setup(width = 1024, height = 768) # resolução da tela do game.
 tela.tracer(0) # Desliga atualizações automáticas para deixar o jogo mais suave
 ultimo_tempo = time.time()
 
